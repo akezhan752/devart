@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CRM-демо — Digital Uptime Astana</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="crm.css">
+</head>
+<body class="crm-body">
+  <header class="site-header">
+    <a class="brand" href="index.html">DEVART <span>×</span> KAZSERVICE</a>
+    <a class="nav-cta" href="index.html#register">← Вернуться к сайту</a>
+  </header>
+  <main class="crm-wrap">
+    <p class="eyebrow">Внутреннее демо · только тестовые данные</p>
+    <h1>Воронка участников</h1>
+    <p>Карточка проходит путь от заявки до follow-up. Переходы сохраняются только в localStorage текущего браузера.</p>
+    <div class="crm-toolbar">
+      <button class="btn btn-primary" id="seed-data" type="button">Заполнить демо-данными</button>
+      <button class="btn btn-ghost-dark" id="clear-data" type="button">Очистить всё</button>
+      <span class="crm-count" id="crm-count" aria-live="polite"></span>
+    </div>
+    <section class="crm-board" id="crm-board" aria-label="CRM-воронка">
+      <div class="crm-column" data-status="new"><h3>Заявка</h3><div class="crm-list"></div></div>
+      <div class="crm-column" data-status="confirmed"><h3>Подтверждено</h3><div class="crm-list"></div></div>
+      <div class="crm-column" data-status="reminder"><h3>Напоминание</h3><div class="crm-list"></div></div>
+      <div class="crm-column" data-status="attended"><h3>Посещение</h3><div class="crm-list"></div></div>
+      <div class="crm-column" data-status="followup"><h3>Follow-up</h3><div class="crm-list"></div></div>
+    </section>
+    <section class="crm-schema">
+      <p class="eyebrow">Предлагаемая структура CRM-карточки</p>
+      <pre class="schema-block"><code>{
+  "id": "DU-0001",
+  "name": "Тестовый участник",
+  "company": "Demo Company",
+  "role": "Руководитель бизнеса",
+  "email": "demo@example.kz",
+  "phone": "+7 700 000 00 00",
+  "status": "new",
+  "createdAt": "ISO-8601"
+}</code></pre>
+    </section>
+  </main>
+  <script src="crm.js"></script>
+</body>
+</html>

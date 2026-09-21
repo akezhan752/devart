@@ -1,0 +1,79 @@
+.crm-body { background: var(--bg-soft); }
+.crm-wrap { padding: 40px 24px 80px; }
+.crm-wrap h1 { margin-bottom: 10px; }
+
+.crm-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 24px 0 28px;
+}
+.btn-ghost-dark {
+  border: 2px solid var(--navy);
+  color: var(--navy);
+  background: transparent;
+}
+.btn-ghost-dark:hover { background: var(--navy); color: var(--white); }
+.crm-count { color: var(--text-muted); font-size: 0.88rem; }
+
+.crm-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+.crm-column {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 14px;
+  min-height: 160px;
+}
+.crm-column h3 {
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--teal-dark);
+  margin-bottom: 12px;
+}
+.crm-card {
+  background: var(--bg-soft);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  font-size: 0.86rem;
+}
+.crm-card .cc-id { color: var(--text-muted); font-size: 0.74rem; }
+.crm-card .cc-name { font-weight: 700; color: var(--navy); margin: 2px 0; }
+.crm-card .cc-meta { color: var(--text-muted); font-size: 0.78rem; margin-bottom: 8px; }
+.crm-card button {
+  width: 100%;
+  border: none;
+  background: var(--teal);
+  color: var(--white);
+  padding: 7px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.crm-card button:hover { background: var(--teal-dark); }
+.crm-card button:disabled { background: var(--border); color: var(--text-muted); cursor: default; }
+.crm-empty { color: var(--text-muted); font-size: 0.8rem; font-style: italic; }
+
+.crm-schema { margin-top: 44px; }
+.schema-block {
+  background: var(--navy);
+  color: #d7e7ec;
+  padding: 18px 20px;
+  border-radius: var(--radius);
+  font-size: 0.84rem;
+  overflow-x: auto;
+}
+
+@media (max-width: 860px) {
+  .crm-board { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .crm-board { grid-template-columns: 1fr; }
+}
